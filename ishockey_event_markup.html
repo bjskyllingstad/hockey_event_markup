@@ -1,42 +1,58 @@
-<!--SportsEvent markup: liga + kamp-->
-<!--Bruk BoxScore som produktside. F. eks https://www.hockey.no/live/BoxScore/Boxscore/7605207 
-Oppdateres ikke før etter kampen er ferdig-->
+<!--eksempel site: https://www.fjordkraftligaen.no/gamecenter/qbQ-Yqha3Wkq/articles/pre-->
+
+<!--Datapoints needed:
+ID: match URL
+Name: liga name
+Name: team name (hjemme) - team name (borte)
+-->
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SportsEvent",
-      "name": "REMA 1000-ligaen Menn",
+      "name": "Fjordkraft-ligaen", 
       "subEvent": {
         "@type": "SportsEvent",
-        "@id": "https://www.hockey.no/live/Schedule",
-        "name": "Frisk Asker - Vålrenga - Fjordkraft-ligaen"
+        "@id": "https://www.fjordkraftligaen.no/gamecenter/qbQ-Yqha3Wkq/articles/pre",
+        "name": "Storhammar - Sparta"
       }
     }
     </script>
 
-<!--Event markup-->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "location": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Asker",
-          "addressRegion": "Viken",
-          "postalCode": "1387",
-          "streetAddress": "Brages vei 2"
-        },
-        "name": "Varner Arena"
-      },
-      "name": "Frisk Asker - Vålrenga",
-      "offers": {
-        "@type": "Offer",
-        "price": "150.00",
-        "priceCurrency": "NOK",
-        "url": "https://www.hockey.no/live/BoxScore/Boxscore/7605207"
-      },
-      "startDate": "2022-09-09T19:00"
-    }
-    </script>
+    <!--Datapoints needed:
+    addressLocality: Kommune
+    addressRegion: Fylke
+    postalCode: postal code for arena
+    streetAddress: for arena
+    Name: Arena Name
+    price: pris på billett
+    priceCurrency: NOK
+    url: ticket URL
+    startDate: date and time for match start
+    -->
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "location": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Hamar",
+              "addressRegion": "Innlandet",
+              "postalCode": "2316",
+              "streetAddress": "Kornsilovegen 54"
+            },
+            "name": "CC Amfi"
+          },
+          "name": "Frisk Asker - Vålrenga",
+          "offers": {
+            "@type": "Offer",
+            "price": "150.00",
+            "priceCurrency": "NOK",
+            "url": "https://tickets.fangroup.io/sil/
+          },
+          "startDate": "2022-09-09T19:00"
+        }
+        </script>
+    
