@@ -1,0 +1,42 @@
+<!--SportsEvent markup: liga + kamp-->
+<!--Bruk BoxScore som produktside. F. eks https://www.hockey.no/live/BoxScore/Boxscore/7605207 
+Oppdateres ikke før etter kampen er ferdig-->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsEvent",
+      "name": "REMA 1000-ligaen Menn",
+      "subEvent": {
+        "@type": "SportsEvent",
+        "@id": "https://www.hockey.no/live/Schedule",
+        "name": "Frisk Asker - Vålrenga - Fjordkraft-ligaen"
+      }
+    }
+    </script>
+
+<!--Event markup-->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Asker",
+          "addressRegion": "Viken",
+          "postalCode": "1387",
+          "streetAddress": "Brages vei 2"
+        },
+        "name": "Varner Arena"
+      },
+      "name": "Frisk Asker - Vålrenga",
+      "offers": {
+        "@type": "Offer",
+        "price": "150.00",
+        "priceCurrency": "NOK",
+        "url": "https://www.hockey.no/live/BoxScore/Boxscore/7605207"
+      },
+      "startDate": "2022-09-09T19:00"
+    }
+    </script>
